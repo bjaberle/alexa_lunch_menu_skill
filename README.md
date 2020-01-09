@@ -9,3 +9,6 @@ https://www.youtube.com/playlist?list=PLpk9OBdrvHbVh8COAlJ8SpyDWY_SAw_RP
 
 
 https://www.pluralsight.com/guides/amazon-alexa-skill-tutorial
+
+Online Alexa device for testing
+https://echosim.io/
