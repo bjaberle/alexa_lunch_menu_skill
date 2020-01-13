@@ -9,7 +9,7 @@ class LunchLady:
     def goGetLunch(self, when_lunch):
 
         # NAVIGATE TO WEBSITE FIND ELEMENTS FOR DATES AND MENU ITEMS
-        res = requests.get('https://www.d52schools.com/o/wms/dining?filter=4492')
+        res = requests.get('https://www.central51.net/o/central-school-district-51/dining?filter=5601')
         #res = requests.get('https://www.d52schools.com/o/wms/dining?filter=4492')
         res.raise_for_status()
         pageHtml = BeautifulSoup(res.text, features='html.parser')
