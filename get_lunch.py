@@ -20,6 +20,8 @@ class LunchLady:
         date_list = []
         menu_item_list = []
         menu_re = re.compile(r'\d\)')
+        menu_with = re.compile(r'w\/', re.IGNORECASE)
+        menu_and = re.compile(r'&')
 
         # GET TODAY'S DATE AND FORMAT TO:<'THURSDAY, Jan 30 '> <---NOTE SPACE @ END
         today = datetime.now()
@@ -55,7 +57,8 @@ class LunchLady:
         alexa_response = date_list[j] + response.get_pre_response() + str(
             pre_build_text.replace(
                          '\n', ', ')) + response.get_post_response()
-
+        alexa_response = menu_with.sub('with ', alexa_response)
+        alexa_response = menu_and.sub('and ', alexa_response)
         alexa_speaks = menu_re.sub('', alexa_response)
 
         return alexa_speaks
